@@ -83,8 +83,8 @@
     um artigo (https://github.com/AndrewJack/versioning-react-native-app) para quem quiser ver na integra, vou
     simplificar aqui o que ele fez, primeiro vamos alterar dois arquivos:
 
-    > android/build.grable;
-    > android/app/build.grable;
+    * android/build.grable;
+    * android/app/build.grable;
 
     Mão na massa galera, vamos editar o arquivo "android/build.grable" e acrescentar as seguintes linhas:
     
