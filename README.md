@@ -38,11 +38,11 @@
     O name package, e exibido no Google Play juntamente com os detalhes do Aplicativo, então certifique-se 
     que o nome seja do seu agrado. Para fazer este procedimento é necessario editar cinco arquivos:
 
-    > android/app/src/main/java/com/<nome_do_projeto>/MainActivity.java
-    > android/app/src/main/java/com/<nome_do_projeto>/MainApplication.java
-    > android/app/src/main/AndroidManifest.xml
-    > android/app/build.gradle
-    > android/app/BUCK
+    * android/app/src/main/java/com/<nome_do_projeto>/MainActivity.java
+    * android/app/src/main/java/com/<nome_do_projeto>/MainApplication.java
+    * android/app/src/main/AndroidManifest.xml
+    * android/app/build.gradle
+    * android/app/BUCK
 
     Para exemplificar usaremos o nome do package "br.com.mavo.exemplo".
 
