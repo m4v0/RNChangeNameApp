@@ -65,11 +65,11 @@
 
     No arquivo BUCK, localize e mude:
     
-      android_build_config(
+      > android_build_config(
           package="br.com.mavo.exemplo"
       )
 
-      android_resource(
+      > android_resource(
           package="br.com.mavo.exemplo"
       )
     
