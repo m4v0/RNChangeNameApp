@@ -9,7 +9,7 @@
 
 # Objetivo
   
-  Este documento tem o objetivo de orientar como mudar:
+  Tem o objetivo de explicar como alterar as seguintes instruções do aplicativo::
   
   > Nome do Aplicativo;
   > Nome do Pacote;
@@ -24,18 +24,23 @@
   Porem podemos já na criação utilizar o seguinte comando:
 
   > react-native init <nome_do_projeto> -package "br.com.<dominio>.<nome_do_aplicativo>"
+  
+  Neste procedimento o projeto já estará com o nome do package definitivo, sem a necessidade de realizar 
+  alterações futuras.
 
 # Como fazer
   Quando utilizamos a primeira opção da seção acima, em algum momento voce terá necessidade de alterar o nome 
   do pacote, então siga as instruções abaixo e verá que é super fácil.
 
   * Mudar o nome do aplicativo (App Name)
+  
     > na pasta android/app/src/main/res/values/ do seu projeto abra o arquivo "strings.xml" procure pela 
       "<string name="app_name">My Android App</string>", onde tem "My Android App", você informa o nome
       do seu aplicativo ex: "Gerador de números", salve o arquivo e compile para ver o resultado.
 
   * Mudar o nome do package 
-    O name package, e exibido no Google Play juntamente com os detalhes do Aplicativo, então certifique-se 
+  
+    O name package é exibido no Google Play juntamente com os detalhes do Aplicativo, então certifique-se 
     que o nome seja do seu agrado. Para fazer este procedimento é necessario editar cinco arquivos:
 
     * android/app/src/main/java/com/<nome_do_projeto>/MainActivity.java
@@ -48,7 +53,7 @@
 
     Os dois primeiros arquivos Java têm o nome do pacote como algo abaixo:
     
-    package br.com.mavo.exemplo;
+    package com.myapp;
 
     mude este nome para:
 
