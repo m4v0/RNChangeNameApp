@@ -68,6 +68,7 @@
     android_build_config(
         package="br.com.mavo.exemplo"
     )
+    
     android_resource(
         package="br.com.mavo.exemplo"
     )
