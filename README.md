@@ -73,7 +73,7 @@
         package="br.com.mavo.exemplo"
       )
     
-    Após todas as mudanças e ter salvo todos os arquivo, vamos executar este comando (na pasta "android"):
+    Após todas as mudanças e ter salvo todos os arquivos, vamos executar este comando (na pasta "android"):
 
     > ./gradlew clean
 
