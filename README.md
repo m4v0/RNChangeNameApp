@@ -53,18 +53,18 @@
 
     Os dois primeiros arquivos Java têm o nome do pacote como algo abaixo:
     
-    package com.myapp;
+    > package com.myapp;
 
     mude este nome para:
 
-    package br.com.mavo.exemplo;
+    > package br.com.mavo.exemplo;
 
     No arquivo AndroidManifest.xml localize e altere "package="br.com.mavo.exemplo".
 
     No arquivo build.gradle, localize e altere para applicationId "br.com.mavo.exemplo"
 
     No arquivo BUCK, localize e mude:
-    <
+    
       android_build_config(
           package="br.com.mavo.exemplo"
       )
@@ -72,7 +72,7 @@
       android_resource(
           package="br.com.mavo.exemplo"
       )
-    >
+    
     Após todas as mudanças e ter salvo todos os arquivo, vamos executar este comando (na pasta "android"):
 
     > ./gradlew clean
