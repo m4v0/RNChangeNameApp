@@ -88,8 +88,8 @@
 
     Mão na massa galera, vamos editar o arquivo "android/build.grable" e acrescentar as seguintes linhas:
     
-    > Na linha 2 import groovy.json.JsonSlurper
-    > No final do arquivo insira as linhas abaixo:
+    * Na linha 2 adicione "import groovy.json.JsonSlurper"
+    * No final do arquivo insira as linhas abaixo:
 
         subprojects {
             ext {
