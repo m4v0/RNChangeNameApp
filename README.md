@@ -66,11 +66,11 @@
     No arquivo BUCK, localize e mude:
     
       > android_build_config(
-          package="br.com.mavo.exemplo"
+        package="br.com.mavo.exemplo"
       )
 
       > android_resource(
-          package="br.com.mavo.exemplo"
+        package="br.com.mavo.exemplo"
       )
     
     Após todas as mudanças e ter salvo todos os arquivo, vamos executar este comando (na pasta "android"):
