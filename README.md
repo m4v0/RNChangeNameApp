@@ -1,6 +1,6 @@
 # React Native 
 
-# Alterar o nome do aplicativo, o nome do pacote e a versão do código para Android
+# Alterar o nome do aplicativo, o nome do pacote e a versão do código para Android/iOS
 
 # Resumo
   Após varias pesquisas na internet, senti a necessidade de escrever este conteúdo em 
@@ -127,5 +127,44 @@
 
     Simples né? rsrsrs
 
--28082018234000
 
+# Alterar a versão do código no iOS
+
+  Para alterar o nome do aplicativo e o nome package no iOS o melhor e usar o xCode, em uma outra ocacião escreverei
+  um artigo sobre esse assunto. Mas para atualizamos a versão no iOS podemos usar um script em Shell Bash (Linux/Mac), 
+  para fazer isso para nós, segue abaixo o codigo:
+
+    #!/usr/bin/env bash -e
+
+    PROJECT_DIR="ios/<nome_do_projeto_react_native>"
+    INFOPLIST_FILE="Info.plist"
+    INFOPLIST_DIR="${PROJECT_DIR}/${INFOPLIST_FILE}"
+
+    PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
+
+    BUILD_NUMBER=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "${INFOPLIST_DIR}")
+    BUILD_NUMBER=$(($BUILD_NUMBER + 1))
+
+    # Atualiza os valores no arquivo info.plist
+    /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${PACKAGE_VERSION#*v}" "${INFOPLIST_DIR}"
+    /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_NUMBER" "${INFOPLIST_DIR}"
+
+  Entendendo o que o script faz, na primeira linha informamos que o script e padrão BASH, são criadas as variáveis:
+  
+    * PROJECT_DIR, recebe o endereço da pasta onde se encontra o projeto iOS;
+    * INFOPLIST_FILE, recebe o nome do arquivo "Info.plist";
+    * INFOPLIST_DIR, recebe o valor do PROJEC_DIR contatena com "/" e com INFOPLIST_FILE, para indicar ao shell,
+      onde irá fazer a leitura e alteração dos valores do versionamento.
+    * PACKAGE_VERSION, recebe o valor da variável "version" que esta dentro do arquivo "package.json"
+    * BUILD_NUMBER, obtem o valor do CFBundleVersion dentro do arquivo info.plist, e ascrecenta mais 1;
+
+# Considerações finais
+
+  Em ambas plataformas você altera apenas a versão (maior, menor ou revisão) apenas no arquivo package.json, e as
+  soluções acima resolvem.
+
+
+Espero que este artigo ajude você!!! t+
+
+
+-29082018090000
