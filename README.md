@@ -64,15 +64,15 @@
     No arquivo build.gradle, localize e altere para applicationId "br.com.mavo.exemplo"
 
     No arquivo BUCK, localize e mude:
+    <
+      android_build_config(
+          package="br.com.mavo.exemplo"
+      )
 
-    android_build_config(
-        package="br.com.mavo.exemplo"
-    )
-    
-    android_resource(
-        package="br.com.mavo.exemplo"
-    )
-
+      android_resource(
+          package="br.com.mavo.exemplo"
+      )
+    >
     Após todas as mudanças e ter salvo todos os arquivo, vamos executar este comando (na pasta "android"):
 
     > ./gradlew clean
@@ -91,7 +91,7 @@
     > Na linha 2 import groovy.json.JsonSlurper
     > No final do arquivo insira as linhas abaixo:
 
-      subprojects {
+        subprojects {
             ext {
                 def npmVersion = getNpmVersionArray()
                 versionMajor = npmVersion[0]
