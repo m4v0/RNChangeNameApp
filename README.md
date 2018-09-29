@@ -119,6 +119,7 @@
     Vamos editar o arquivo "android/app/build.grable" e ascrecentar as seguintes linhas na seção defaulConfig:
 
     > versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+    
     > versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
     Finalizando todos estes procedimentos de versionamento, basta você mudar a versão no arquivo package.json, 
