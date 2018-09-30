@@ -23,7 +23,7 @@
 
   Porem podemos já na criação utilizar o seguinte comando:
 
-  > react-native init <nome_do_projeto> -package "br.com.<dominio>.<nome_do_aplicativo>"
+  > react-native init <nome_do_projeto> --package=br.com.<dominio>.<nome_do_aplicativo>
   
   Neste procedimento o projeto já estará com o nome do package definitivo, sem a necessidade de realizar 
   alterações futuras.
